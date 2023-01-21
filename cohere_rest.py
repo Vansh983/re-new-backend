@@ -1,4 +1,3 @@
-# Setting up cohere
 import cohere
 
 co = cohere.Client('bPnEkiW2KeYyupinU83dcN1wKVp4w1Lo1zXx28dC')
