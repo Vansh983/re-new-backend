@@ -1,8 +1,7 @@
 # Setting up modules
 from cohere_rest import generateTasks
 from flask import Flask, jsonify, request
-from aws_s3 import s3, bucket_name
-from aws_dynamo import db, table, postImage, retrieveImage
+from aws import s3, bucket_name, db, table, postImage, retrieveImage
 # from flask_restful import Api, Resource
 
 app = Flask(__name__)
@@ -24,12 +23,19 @@ def upload():
     s3.put_object(Bucket=bucket_name, Key=file.filename, Body=file_data)
     return jsonify({'message': 'File uploaded successfully'})
 
+# download (filename) takes the filename in the AWS S3 bucket and returns the universal URL to view it
 @app.route('/download/<string:filename>', methods=['GET'])
 def download(filename):
     data = s3.get_object(Bucket=bucket_name, Key=filename)
     file_data = data['Body'].read()
     print(file_data)
-    return file_data # this should return the URL
+
+    url = s3.generate_presigned_url('get_object', Params={
+        'Bucket': bucket_name,
+        'Key': filename
+    }, ExpiresIn = 3600)
+
+    return url
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=105)
