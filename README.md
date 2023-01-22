@@ -14,6 +14,15 @@ To generate 4 random tasks, use the 'GET' method on the extension /category/<str
 
 This should return a JSON of an array of 4 random tasks, given a category. The <string:category> MUST be exactly one of: 'skill', 'academic', 'fitness', or 'wellness'.
 
+For example, in Postman, you could send a 'GET' method to http://0.0.0.0:105/category/skill, and this would return: 
+[
+    "",
+    " Read a book",
+    " Learn a new song",
+    " Try a new hobby",
+    " Get active"
+]
+
 
 
 ###### 2. UPLOADING IMAGES TO THE AWS CLOUD
