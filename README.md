@@ -6,6 +6,8 @@
 
 * Note: The API Endpoint is at local host at http://0.0.0.0:105/
 
+* Note: The AWS Cloud comes preloaded with 5 sample users: 'user1', 'johndoe66', 'emilysmith08', 'jessicadonn1', 'tianjiyuan12'. Each have their own posts. 
+
 
 
 ###### 1. USING THE COHERE API THROUGH FLASK
