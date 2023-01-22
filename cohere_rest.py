@@ -1,7 +1,7 @@
 # COHERE API
 import cohere
 
-co = cohere.Client('bPnEkiW2KeYyupinU83dcN1wKVp4w1Lo1zXx28dC')
+co = cohere.Client('XXXXX')
 
 # Generates 4 tasks for a choice of category
 def generateTasks(category):
