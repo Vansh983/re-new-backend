@@ -1,6 +1,6 @@
 # Back-end for Re:New (UofTHacks X)
 
-DOCUMENTATION
+## DOCUMENTATION
 
 * Note: The upload feature may not be working properly
 
