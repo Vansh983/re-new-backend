@@ -5,8 +5,8 @@ import uuid
 
 # Initializing our API keys - Replace with generic ones when going public
 s3 = boto3.client('s3',
-    aws_access_key_id='AKIAT45JMXVXYVQQSDYK',
-    aws_secret_access_key='5mAX7u63XxOYoiBbpcGvShf9LZJyqQDQvyShX7Zm',
+    aws_access_key_id='XXXXX',
+    aws_secret_access_key='XXXXX',
     region_name='ca-central-1'
 )
 
@@ -14,8 +14,8 @@ bucket_name = 'renewphotos'
 
 db = boto3.resource(
     "dynamodb",
-    aws_access_key_id='AKIAT45JMXVXYVQQSDYK',
-    aws_secret_access_key='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',
+    aws_access_key_id='XXXXX',
+    aws_secret_access_key='XXXXX',
     region_name='ca-central-1',
 )
 
