@@ -13,7 +13,7 @@ def allowed_file(filename):
 # Generating tasks
 @app.route('/category/<string:category>/', methods=['GET'])
 def cohere_run_m(category):
-    return jsonify(generateTasks(category))
+    return jsonify(generateTasks(category)[1:])
 
 # Uploading images to the cloud
 @app.route('/upload', methods=['POST'])
